@@ -10,7 +10,7 @@ docker push ubik74/multi-client:$GIT_SHA
 docker push ubik74/multi-server:$GIT_SHA
 docker push ubik74/multi-worker:$GIT_SHA
 
-kubectl apply -f k8s
+kubectl apply -f k8s --force
 
 kubectl set image deployments/server-deployment server=ubik74/multi-server:$GIT_SHA
 kubectl set image deployments/client-deployment client=ubik74/multi-client:$GIT_SHA
