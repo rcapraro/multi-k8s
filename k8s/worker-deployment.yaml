@@ -13,7 +13,7 @@ spec:
         component: worker
     spec:
       containers:
-        - name: worker-deployment
+        - name: worker
           image: ubik74/multi-worker
           resources:
             limits:
